@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block body_block%}
+
+<div class="container">
+  <div>
+      <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            <center>EMPLOYEE DETAILS</center>
+          </div>
+
+          <div>
+            {%if data.profilepic%}
+              <img src="{{data.profilepic.url}}" alt="" width="100%;">
+            {%endif%}
+
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{data.name}}</li>
+            <li class="list-group-item">{{data.department}}</li>
+            <li class="list-group-item">{{data.salary}}</li>
+            <li class="list-group-item">{{data.email}}</li>
+          </ul>
+        </div>
+  </div>
+</div>
+
+{%endblock%}
